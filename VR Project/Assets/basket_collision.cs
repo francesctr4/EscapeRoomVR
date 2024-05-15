@@ -6,6 +6,7 @@ public class basket_collision : MonoBehaviour
 {
     public GameObject basket;
     public GameObject door;
+    public GameObject particulas;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,15 +18,28 @@ public class basket_collision : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionStay(Collision other)
     {
         if (basket != null) 
         {
             if(other.gameObject == basket) 
             { 
                 door.SetActive(true); 
+                particulas.SetActive(true); 
             }
           
+        }
+    }
+    private void OnCollisionExit(Collision other)
+    {
+        if (basket != null)
+        {
+            if (other.gameObject == basket)
+            {
+                door.SetActive(false);
+                particulas.SetActive(false);
+            }
+
         }
     }
 }
