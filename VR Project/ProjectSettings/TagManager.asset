@@ -10,6 +10,8 @@ TagManager:
   - Cuadrado
   - Circulo
   - Rectangulo
+  - Trozo
+  - Mitad_triangulo
   layers:
   - Default
   - TransparentFX
