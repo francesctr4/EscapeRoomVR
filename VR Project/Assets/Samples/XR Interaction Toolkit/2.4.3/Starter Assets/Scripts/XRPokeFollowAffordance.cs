@@ -106,6 +106,19 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             set => m_InitialPosition = value;
         }
 
+        [SerializeField]
+        [Tooltip("AudioSource that will play when the button is pressed.")]
+        AudioSource m_AudioSource;
+
+        /// <summary>
+        /// AudioSource that will play when the button is pressed.
+        /// </summary>
+        public AudioSource audioSource
+        {
+            get => m_AudioSource;
+            set => m_AudioSource = value;
+        }
+
         IPokeStateDataProvider m_PokeDataProvider;
         IMultiPokeStateDataProvider m_MultiPokeStateDataProvider;
 
@@ -120,7 +133,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         protected void Awake()
         {
             m_MultiPokeStateDataProvider = GetComponentInParent<IMultiPokeStateDataProvider>();
-            if(m_MultiPokeStateDataProvider == null)
+            if (m_MultiPokeStateDataProvider == null)
                 m_PokeDataProvider = GetComponentInParent<IPokeStateDataProvider>();
         }
 
@@ -133,10 +146,10 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 m_InitialPosition = m_PokeFollowTransform.localPosition;
                 m_BindingsGroup.AddBinding(m_TransformTweenableVariable.Subscribe(OnTransformTweenableVariableUpdated));
-                
-                if(m_MultiPokeStateDataProvider != null)
+
+                if (m_MultiPokeStateDataProvider != null)
                     m_BindingsGroup.AddBinding(m_MultiPokeStateDataProvider.GetPokeStateDataForTarget(transform).Subscribe(OnPokeStateDataUpdated));
-                else if(m_PokeDataProvider != null)
+                else if (m_PokeDataProvider != null)
                     m_BindingsGroup.AddBinding(m_PokeDataProvider.pokeStateData.SubscribeAndUpdate(OnPokeStateDataUpdated));
             }
             else
@@ -188,6 +201,12 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                     targetPosition = Vector3.ClampMagnitude(targetPosition, m_MaxDistance);
 
                 m_TransformTweenableVariable.target = targetPosition;
+
+                // Reproduce el audio cuando el botón es presionado
+                if (m_AudioSource != null && !m_AudioSource.isPlaying)
+                {
+                    m_AudioSource.Play();
+                }
             }
             else if (m_ReturnToInitialPosition)
             {
