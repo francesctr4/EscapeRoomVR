@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Puzzle 2/Puzzle2.unity
     guid: d5e9c65bc98fdc24ebd1377c2d418e10
   - enabled: 1
-    path: Assets/Puzzle3.unity
+    path: Assets/Lvl 3/Puzzle3.unity
     guid: 8076a3daa53167b468b169844792e4db
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}

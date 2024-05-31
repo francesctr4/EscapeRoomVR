@@ -12,6 +12,7 @@ TagManager:
   - Rectangulo
   - Trozo
   - Mitad_triangulo
+  - Cube
   layers:
   - Default
   - TransparentFX
