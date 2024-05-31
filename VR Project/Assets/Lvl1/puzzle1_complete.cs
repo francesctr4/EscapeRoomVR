@@ -11,6 +11,7 @@ public class puzzle1_complete : MonoBehaviour
     public bool Rectangulo;
     public bool Cuadrado;
 
+    public GameObject puzzle3;
     private void Start()
     {
         Triangulo = false;
@@ -22,7 +23,7 @@ public class puzzle1_complete : MonoBehaviour
     {
         if(Triangulo && Circulo && Rectangulo && Cuadrado)
         {
-            //Activar botones
+            puzzle3.SetActive(true);    
         }
     }
     private void OnCollisionEnter(Collision collision)
