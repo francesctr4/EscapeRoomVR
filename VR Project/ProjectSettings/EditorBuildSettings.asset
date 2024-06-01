@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Puzzle1.unity
     guid: fc5fcbcda78751e46a4a34a1b6adddf7
   - enabled: 1
-    path: Assets/Puzzle 2/Puzzle2.unity
+    path: Assets/LEVEL_2/Puzzle2.unity
     guid: d5e9c65bc98fdc24ebd1377c2d418e10
   - enabled: 1
     path: Assets/Lvl 3/Puzzle3.unity
