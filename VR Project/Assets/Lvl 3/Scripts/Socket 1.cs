@@ -23,10 +23,12 @@ public class Socket1 : MonoBehaviour
     {
         if (correct)
         {
+            // Sonido correcto
             puzzleManager.Socket1 = true;
         }
         else
         {
+            // Sonido incorrecto
             puzzleManager.Socket1 = false;
         }
     }

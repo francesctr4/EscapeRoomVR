@@ -6,6 +6,7 @@ public class LightCollision : MonoBehaviour
 {
     public GameObject lightBulb;
     public ParticleSystem particles;
+    public LVL3Manager lVL3Manager;
 
     void Start()
     {
@@ -21,8 +22,16 @@ public class LightCollision : MonoBehaviour
     {
         if (collision.gameObject.tag == "Cube")
         {
-            lightBulb.SetActive(false);
             particles.Play();
+            lightBulb.SetActive(false);
+
+            StartCoroutine(ExecuteAfterTime(2.0f));
         }
+    }
+
+    IEnumerator ExecuteAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+        lVL3Manager.ActivatePuzzle2();
     }
 }
