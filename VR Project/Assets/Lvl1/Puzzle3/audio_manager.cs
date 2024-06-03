@@ -16,7 +16,6 @@ public class audio_manager : MonoBehaviour
     private bool audio_2_played;
     public bool audio_2_ready;
     public bool audio_3_ready;
-    public bool complete;
 
     public GameObject ball;
 
