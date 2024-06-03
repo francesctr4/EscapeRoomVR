@@ -1054,8 +1054,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleManager: {fileID: 534307682}
-  correctSound: {fileID: 0}
-  incorrectSound: {fileID: 0}
 --- !u!1 &188100894
 GameObject:
   m_ObjectHideFlags: 0
@@ -2220,8 +2218,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleManager: {fileID: 534307682}
-  correctSound: {fileID: 0}
-  incorrectSound: {fileID: 0}
 --- !u!1 &531730139
 GameObject:
   m_ObjectHideFlags: 0
@@ -2272,7 +2268,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &534307681
 Transform:
   m_ObjectHideFlags: 0
@@ -2584,8 +2580,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleManager: {fileID: 534307682}
-  correctSound: {fileID: 0}
-  incorrectSound: {fileID: 0}
 --- !u!23 &650003255 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 8664287381343111386, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
@@ -2601,6 +2595,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5733877398150212898, guid: 3fa5fe9ae105de841a202e71deb91df6, type: 3}
   m_PrefabInstance: {fileID: 3843739342277331493}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &727023076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 727023077}
+  m_Layer: 0
+  m_Name: Attach Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &727023077
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727023076}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1529660667}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &733409975 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5669242486575571981, guid: c6d2345baa0b30f46ac6d0ea8110fbde, type: 3}
@@ -4215,7 +4240,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -4282,7 +4307,8 @@ Transform:
   m_LocalPosition: {x: 0.2971158, y: 0.24663532, z: -0.0030769433}
   m_LocalScale: {x: 0.036722023, y: 0.035628237, z: 0.036722023}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 727023077}
   m_Father: {fileID: 1816434469}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4320,7 +4346,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_InteractionLayers:
     m_Bits: 4294967295
-  m_AttachTransform: {fileID: 1599361164}
+  m_AttachTransform: {fileID: 727023077}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
@@ -4346,18 +4372,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 650003252}
-        m_TargetAssemblyTypeName: Socket1, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
@@ -4365,18 +4379,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 650003252}
-        m_TargetAssemblyTypeName: Socket1, Assembly-CSharp
-        m_MethodName: SolvePuzzle
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4705,11 +4707,6 @@ PrefabInstance:
       addedObject: {fileID: 1944326811}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8accb66350fedeb49aebbd1c482ce30d, type: 3}
---- !u!4 &1599361164 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3106851359726904547, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
-  m_PrefabInstance: {fileID: 2706606555291771098}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1605856538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5018,8 +5015,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleManager: {fileID: 534307682}
-  correctSound: {fileID: 0}
-  incorrectSound: {fileID: 0}
 --- !u!4 &1816434469 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8accb66350fedeb49aebbd1c482ce30d, type: 3}
