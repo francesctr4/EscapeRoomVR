@@ -20,12 +20,19 @@ public class LightCollision : MonoBehaviour
 
     void Update()
     {
-        
+        if (masterBool)
+        {
+            particles.Play();
+            explosion.Play();
+            lightBulb.SetActive(false);
+
+            StartCoroutine(ExecuteAfterTime(2.0f));
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Cube" || masterBool)
+        if (collision.gameObject.tag == "Cube")
         {
             particles.Play();
             explosion.Play();
