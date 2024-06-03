@@ -16,11 +16,6 @@ public class Socket1 : MonoBehaviour
 
     void Update()
     {
-        
-    }
-
-    public void SolvePuzzle()
-    {
         if (correct)
         {
             // Sonido correcto

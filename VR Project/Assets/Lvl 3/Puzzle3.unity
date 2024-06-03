@@ -151,7 +151,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2437765}
   m_LocalRotation: {x: 0.27854428, y: -0.47334442, z: 0.16077645, w: 0.8200666}
-  m_LocalPosition: {x: -1.512, y: -0.436, z: -0.418}
+  m_LocalPosition: {x: -1.02, y: -0.338, z: -0.409}
   m_LocalScale: {x: 100, y: 100.000046, z: 100.000015}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -776,7 +776,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7527370589515084725, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.35599995
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 7527370589515084725, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1684,7 +1684,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7527370589515084725, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.35599995
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 7527370589515084725, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1859,7 +1859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &534307681
 Transform:
   m_ObjectHideFlags: 0
@@ -4099,7 +4099,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7527370589515084725, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.35599995
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 7527370589515084725, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4817,7 +4817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7527370589515084725, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.35599995
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 7527370589515084725, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4868,11 +4868,19 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 650003252}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 650003252}
+    - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 650003252}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
@@ -4884,12 +4892,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SolvePuzzle
       objectReference: {fileID: 0}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SolvePuzzle
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -4897,6 +4909,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Socket1, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: Socket1, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
@@ -4909,7 +4925,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

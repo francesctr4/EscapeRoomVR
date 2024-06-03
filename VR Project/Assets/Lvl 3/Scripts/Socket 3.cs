@@ -14,11 +14,6 @@ public class Socket3 : MonoBehaviour
 
     void Update()
     {
-
-    }
-
-    public void SolvePuzzle()
-    {
         if (correct)
         {
             puzzleManager.Socket1 = true;
