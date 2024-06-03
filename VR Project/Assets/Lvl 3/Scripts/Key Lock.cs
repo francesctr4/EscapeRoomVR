@@ -6,33 +6,53 @@ using UnityEngine.SceneManagement;
 public class KeyLock : MonoBehaviour
 {
     public ParticleSystem smoke;
+    public bool open;
+    public int sceneNumber;
+    public AudioSource keySound;
 
     void Start()
     {
-        
+        sceneNumber = 0;
     }
 
     void Update()
     {
-        
+        if (open)
+        {
+            //Sonido puerta 
+            keySound.Play();
+            //Sistema de particulas
+            smoke.Play();
+
+            StartCoroutine(ExecuteAfterTime(5.0f));
+        }
     }
 
     IEnumerator ExecuteAfterTime(float time)
     {
         yield return new WaitForSeconds(time);
         // Cambiar de escena
-        SceneManager.LoadScene(0);
+        if (sceneNumber < 3)
+        {
+            sceneNumber++;
+        }
+        else
+        {
+            sceneNumber = 0;
+        }
+
+        SceneManager.LoadScene(sceneNumber);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerStay(Collider other)
     {
-        if(collision.gameObject.tag == "Key")
+        if (other.tag == "Key")
         {
-            //Sonido puerta 
-            //Sistema de particulas
-            smoke.Play();
-
-            StartCoroutine(ExecuteAfterTime(5.0f));
+            open = true;
+        }
+        else
+        {
+            open = false;
         }
     }
 }

@@ -8,6 +8,9 @@ public class LightCollision : MonoBehaviour
     public ParticleSystem particles;
     public LVL3Manager lVL3Manager;
 
+    public AudioSource explosion;
+    public AudioSource puzzleComplete;
+
     void Start()
     {
         
@@ -23,6 +26,7 @@ public class LightCollision : MonoBehaviour
         if (collision.gameObject.tag == "Cube")
         {
             particles.Play();
+            explosion.Play();
             lightBulb.SetActive(false);
 
             StartCoroutine(ExecuteAfterTime(2.0f));
@@ -32,6 +36,7 @@ public class LightCollision : MonoBehaviour
     IEnumerator ExecuteAfterTime(float time)
     {
         yield return new WaitForSeconds(time);
+        puzzleComplete.Play();
         lVL3Manager.ActivatePuzzle2();
     }
 }

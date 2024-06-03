@@ -10,6 +10,8 @@ public class SymbolsPuzzleManager : MonoBehaviour
     public bool Socket3 = false;
     public bool Socket4 = false;
 
+    public AudioSource puzzleComplete;
+
     public LVL3Manager lvl3Manager;
 
     void Start()
@@ -20,6 +22,7 @@ public class SymbolsPuzzleManager : MonoBehaviour
     {
         if (Socket1 && Socket2 && Socket3 && Socket4)
         {
+            puzzleComplete.Play();
             lvl3Manager.ActivatePuzzle3();
         }
     }
