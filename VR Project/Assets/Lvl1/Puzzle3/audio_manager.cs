@@ -17,49 +17,53 @@ public class audio_manager : MonoBehaviour
     public GameObject audio2;
     public GameObject audio3;
 
-    public GameObject caja;
+    public GameObject ball;
 
-    // Update is called once per frame
+    private Coroutine executeAfterTimeCoroutine;
+
+    void FunctionToExecute()
+    {
+        script4.Play();
+        ball.active = true;
+    }
+
     void Update()
     {
         if (script1.isPlaying)
         {
             audio_2_ready = true;
-            caja.SetActive(true);  
         }
-        if (script1.isPlaying && audio_2_ready == true && audio_3_ready == false)
+
+        if (script1.isPlaying && audio_2_ready && audio_3_ready)
         {
-            caja.SetActive(false);
-            audio_2_ready = false;
-        }
-        if (script1.isPlaying && audio_2_ready == true && audio_3_ready == true)
-        {
-            caja.SetActive(false);
-            audio_3_ready = false;
-            audio_2_ready = false;
-        }
-        if (script2.isPlaying && audio_2_ready == true && audio_3_ready == false)
-        {
-           audio_3_ready = true;
-        }
-        if (script2.isPlaying && audio_2_ready == true && audio_3_ready == true)
-        {
-            caja.SetActive(false);
-            audio_3_ready = false;
-            audio_2_ready = false;
-        }
-        if (script3.isPlaying && audio_2_ready == true && audio_3_ready == false)
-        {
-            caja.SetActive(false);
             audio_3_ready = false;
             audio_2_ready = false;
         }
 
-        if (script3.isPlaying && audio_3_ready == true && audio_2_ready == true)
+        if (script2.isPlaying && audio_2_ready && !audio_3_ready)
         {
-            script4.Play();
-
-            Debug.Log("Esta bien");
+            audio_3_ready = true;
         }
+
+        if (script3.isPlaying && audio_2_ready && !audio_3_ready)
+        {
+            audio_3_ready = false;
+            audio_2_ready = false;
+        }
+
+        if (script3.isPlaying && audio_3_ready)
+        {
+            if (executeAfterTimeCoroutine == null)
+            {
+                executeAfterTimeCoroutine = StartCoroutine(ExecuteAfterTime(3f));
+            }
+        }
+    }
+
+    IEnumerator ExecuteAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+        FunctionToExecute();
+        executeAfterTimeCoroutine = null; // Reset the coroutine reference
     }
 }
