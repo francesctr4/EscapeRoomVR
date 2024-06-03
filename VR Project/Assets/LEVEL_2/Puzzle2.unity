@@ -3808,7 +3808,7 @@ GameObject:
   m_Component:
   - component: {fileID: 613435964}
   m_Layer: 0
-  m_Name: ' ------ PHASE 3 (TRIANGLES) ------'
+  m_Name: ' ------ PHASE 3 (SPHERES) ------'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
