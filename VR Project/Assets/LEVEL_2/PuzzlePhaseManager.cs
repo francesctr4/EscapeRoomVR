@@ -16,7 +16,7 @@ public class PuzzlePhaseManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        EnablePhase3();
+        EnablePhase1();
     }
 
     // Update is called once per frame
