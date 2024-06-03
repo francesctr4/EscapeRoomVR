@@ -4,17 +4,31 @@ using UnityEngine;
 
 public class HideMatches : MonoBehaviour
 {
+    // Start is called before the first frame update
     void Start()
     {
-        // Find all game objects in the scene
-        GameObject[] allObjects = FindObjectsOfType<GameObject>();
+        // Start the coroutine to hide matches every 3 seconds
+        StartCoroutine(HideMatchesCoroutine());
+    }
 
-        // Iterate through each object and disable those with "match" in their name
-        foreach (GameObject obj in allObjects)
+    // Coroutine to hide matches every 3 seconds
+    IEnumerator HideMatchesCoroutine()
+    {
+        while (true)
         {
-            if (obj.name.Contains("Match"))
+            // Wait for 3 seconds
+            yield return new WaitForSeconds(1);
+
+            // Find all game objects in the scene
+            GameObject[] allObjects = FindObjectsOfType<GameObject>();
+
+            // Iterate through each object and disable those with "Match" in their name
+            foreach (GameObject obj in allObjects)
             {
-                obj.SetActive(false);
+                if (obj.name.Contains("Match"))
+                {
+                    obj.SetActive(false);
+                }
             }
         }
     }
