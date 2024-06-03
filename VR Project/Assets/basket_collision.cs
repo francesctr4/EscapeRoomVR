@@ -19,7 +19,7 @@ public class basket_collision : MonoBehaviour
             if (other.gameObject == basket)
             {
                 door.SetActive(true);
-                audio_win.Play();   
+                   
             }
 
         }
