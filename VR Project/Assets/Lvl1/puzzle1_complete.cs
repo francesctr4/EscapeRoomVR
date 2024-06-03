@@ -7,7 +7,6 @@ using UnityEngine;
 public class puzzle1_complete : MonoBehaviour
 {
     private bool audio_played = false;
-    public int final = 0;
 
     public AudioSource win;
 
