@@ -7,9 +7,6 @@ public class Socket2 : MonoBehaviour
     public SymbolsPuzzleManager puzzleManager;
     private bool correct = false;
 
-    public AudioSource correctSound;
-    public AudioSource incorrectSound;
-
     void Start()
     {
 
@@ -19,12 +16,10 @@ public class Socket2 : MonoBehaviour
     {
         if (correct)
         {
-            correctSound.Play();
             puzzleManager.Socket2 = true;
         }
         else
         {
-            incorrectSound.Play();
             puzzleManager.Socket2 = false;
         }
     }

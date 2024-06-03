@@ -9,10 +9,6 @@ public class Socket1 : MonoBehaviour
     public SymbolsPuzzleManager puzzleManager;
     private bool correct = false;
 
-    public AudioSource correctSound;
-    public AudioSource incorrectSound;
-
-
     void Start()
     {
         
@@ -23,13 +19,11 @@ public class Socket1 : MonoBehaviour
         if (correct)
         {
             // Sonido correcto
-            correctSound.Play();
             puzzleManager.Socket1 = true;
         }
         else
         {
             // Sonido incorrecto
-            incorrectSound.Play();
             puzzleManager.Socket1 = false;
         }
     }
