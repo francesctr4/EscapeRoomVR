@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5549557121856724738}
   - component: {fileID: 3794577559741125379}
   - component: {fileID: 6185320458052928154}
+  - component: {fileID: 3625003863768745700}
   m_Layer: 0
   m_Name: Socket Match
   m_TagString: Untagged
@@ -152,13 +153,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3625003863768745700}
+        m_TargetAssemblyTypeName: SocketSelected, Assembly-CSharp
+        m_MethodName: SocketSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5549557121856724738}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 3625003863768745700}
+        m_TargetAssemblyTypeName: SocketSelected, Assembly-CSharp
+        m_MethodName: SocketUnselect
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -192,6 +205,19 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
+--- !u!114 &3625003863768745700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904336709542768439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7492c3ae9fd3d5c4f857247d8e3e8ed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selected: 0
 --- !u!1 &2489245548298179385
 GameObject:
   m_ObjectHideFlags: 0
