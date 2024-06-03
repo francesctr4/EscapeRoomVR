@@ -14,13 +14,15 @@ public class SymbolsPuzzleManager : MonoBehaviour
 
     public LVL3Manager lvl3Manager;
 
+    public bool masterBool = false;
+
     void Start()
     {
         
     }
     void Update()
     {
-        if (Socket1 && Socket2 && Socket3 && Socket4)
+        if (Socket1 && Socket2 && Socket3 && Socket4 || masterBool)
         {
             puzzleComplete.Play();
             lvl3Manager.ActivatePuzzle3();

@@ -10,6 +10,8 @@ public class KeyLock : MonoBehaviour
     public int sceneNumber;
     public AudioSource keySound;
 
+    public bool masterBool = false;
+
     void Start()
     {
         sceneNumber = 0;
@@ -17,14 +19,14 @@ public class KeyLock : MonoBehaviour
 
     void Update()
     {
-        if (open)
+        if (open || masterBool)
         {
             //Sonido puerta 
             keySound.Play();
             //Sistema de particulas
             smoke.Play();
 
-            StartCoroutine(ExecuteAfterTime(5.0f));
+            StartCoroutine(ExecuteAfterTime(10.0f));
         }
     }
 
@@ -32,16 +34,17 @@ public class KeyLock : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         // Cambiar de escena
-        if (sceneNumber < 3)
-        {
-            sceneNumber++;
-        }
-        else
-        {
-            sceneNumber = 0;
-        }
+        //if (sceneNumber < 3)
+        //{
+        //    sceneNumber++;
+        //}
+        //else
+        //{
+        //    sceneNumber = 0;
+        //}
 
-        SceneManager.LoadScene(sceneNumber);
+        //SceneManager.LoadScene(sceneNumber);
+        SceneManager.LoadScene(0);
     }
 
     private void OnTriggerStay(Collider other)

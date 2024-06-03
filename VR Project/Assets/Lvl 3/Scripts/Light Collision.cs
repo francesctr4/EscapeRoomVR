@@ -11,6 +11,8 @@ public class LightCollision : MonoBehaviour
     public AudioSource explosion;
     public AudioSource puzzleComplete;
 
+    public bool masterBool = false;
+
     void Start()
     {
         
@@ -23,7 +25,7 @@ public class LightCollision : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Cube")
+        if (collision.gameObject.tag == "Cube" || masterBool)
         {
             particles.Play();
             explosion.Play();
