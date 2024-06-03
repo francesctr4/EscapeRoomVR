@@ -6,68 +6,27 @@ using UnityEngine;
 
 public class puzzle1_complete : MonoBehaviour
 {
-    public bool Triangulo;
-    public bool Circulo;
-    public bool Rectangulo;
-    public bool Cuadrado;
+    private bool audio_played = false;
+    public int final = 0;
 
     public AudioSource win;
-    
+
     public GameObject puzzle3;
-    private void Start()
-    {
-        Triangulo = false;
-        Circulo = false;
-        Rectangulo = false;
-        Cuadrado = false;
-    }
+
+    public Collision_entrefiguras triangulo;
+    public Collision_entrefiguras circulo;
+    public Collision_entrefiguras rectangulo;
+    public Collision_entrefiguras cuadrado;
+
     private void Update()
     {
-        if(Triangulo && Circulo && Rectangulo && Cuadrado)
+        if (triangulo.collision && circulo.collision && rectangulo.collision && cuadrado.collision && !audio_played)
         {
-            puzzle3.SetActive(true);    
-        }
-        if(Cuadrado || Triangulo || Circulo || Rectangulo)
-        {
+            // Reproducir el sonido 'win' solo si no se ha reproducido antes
             win.Play();
+            audio_played = true;
+            puzzle3.SetActive(true);
         }
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag == "Triangulo")
-        {
-            Triangulo = true;
-        }
-        if (collision.gameObject.tag == "Cuadrado")
-        {
-            Circulo = true;
-        }
-        if (collision.gameObject.tag == "Circulo")
-        {
-            Rectangulo = true;
-        }
-        if (collision.gameObject.tag == "Rectangulo")
-        {
-            Cuadrado = true;
-        }
-    }
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.tag == "Triangulo")
-        {
-            Triangulo = false;
-        }
-        if (collision.gameObject.tag == "Cuadrado")
-        {
-            Circulo = false;
-        }
-        if (collision.gameObject.tag == "Circulo")
-        {
-            Rectangulo = false;
-        }
-        if (collision.gameObject.tag == "Rectangulo")
-        {
-            Cuadrado = false;
-        }
-    }
+
 }
