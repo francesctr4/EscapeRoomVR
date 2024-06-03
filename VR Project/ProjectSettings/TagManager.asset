@@ -17,6 +17,7 @@ TagManager:
   - Reptile
   - Bird
   - Dragon
+  - Key
   layers:
   - Default
   - TransparentFX
