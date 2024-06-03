@@ -20,6 +20,7 @@ public class audio_manager : MonoBehaviour
     public GameObject ball;
 
     private Coroutine executeAfterTimeCoroutine;
+    private bool functionExecuted = false; // Bandera para controlar si la función se ha ejecutado
 
     // Método para ejecutar acciones después de un tiempo
     private IEnumerator ExecuteAfterTime(float time)
@@ -32,8 +33,12 @@ public class audio_manager : MonoBehaviour
     // Método para ejecutar una acción cuando se completa la reproducción de los audios
     private void FunctionToExecute()
     {
-        win.Play();
-        ball.SetActive(true);
+        if (!functionExecuted) // Verificar si la función no se ha ejecutado antes
+        {
+            win.Play();
+            ball.SetActive(true);
+            functionExecuted = true; // Marcar la función como ejecutada
+        }
     }
 
     void Update()
