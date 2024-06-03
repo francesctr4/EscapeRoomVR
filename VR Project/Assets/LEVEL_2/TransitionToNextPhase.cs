@@ -7,8 +7,6 @@ public class TransitionToNextPhase : MonoBehaviour
 {
     public PuzzlePhaseManager phaseManager;
     public int transitionPhase;
-    public Material fadeMaterial;  // The material applied to the full-screen quad
-    public float fadeDuration = 1.0f;  // Duration of the fade
     public float waitTime = 2.0f;  // Time to wait before transitioning
 
     public void StartTransition()
@@ -20,7 +18,6 @@ public class TransitionToNextPhase : MonoBehaviour
     private IEnumerator GoToPhaseAfterDelay()
     {
         yield return new WaitForSeconds(waitTime);
-        yield return StartCoroutine(FadeToBlack());
 
         switch (transitionPhase)
         {
@@ -36,41 +33,6 @@ public class TransitionToNextPhase : MonoBehaviour
             default:
                 break;
         }
-        
-        yield return StartCoroutine(FadeFromBlack());
-    }
 
-    private IEnumerator FadeToBlack()
-    {
-        float elapsedTime = 0.0f;
-        Color color = fadeMaterial.color;
-
-        while (elapsedTime < fadeDuration)
-        {
-            color.a = Mathf.Clamp01(elapsedTime / fadeDuration);
-            fadeMaterial.color = color;
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-
-        color.a = 1.0f;
-        fadeMaterial.color = color;
-    }
-
-    private IEnumerator FadeFromBlack()
-    {
-        float elapsedTime = 0.0f;
-        Color color = fadeMaterial.color;
-
-        while (elapsedTime < fadeDuration)
-        {
-            color.a = 1.0f - Mathf.Clamp01(elapsedTime / fadeDuration);
-            fadeMaterial.color = color;
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-
-        color.a = 0.0f;
-        fadeMaterial.color = color;
     }
 }
