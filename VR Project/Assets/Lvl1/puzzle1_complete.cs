@@ -11,6 +11,8 @@ public class puzzle1_complete : MonoBehaviour
     public bool Rectangulo;
     public bool Cuadrado;
 
+    public AudioSource win;
+    
     public GameObject puzzle3;
     private void Start()
     {
@@ -24,6 +26,10 @@ public class puzzle1_complete : MonoBehaviour
         if(Triangulo && Circulo && Rectangulo && Cuadrado)
         {
             puzzle3.SetActive(true);    
+        }
+        if(Cuadrado || Triangulo || Circulo || Rectangulo)
+        {
+            win.Play();
         }
     }
     private void OnCollisionEnter(Collision collision)

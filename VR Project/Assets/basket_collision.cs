@@ -8,6 +8,8 @@ public class basket_collision : MonoBehaviour
     public GameObject basket;
     public GameObject door;
     public GameObject particulas;
+
+    public AudioSource audio_win;
     // Start is called before the first frame update
 
     private void OnTriggerExit(Collider other)
@@ -17,6 +19,7 @@ public class basket_collision : MonoBehaviour
             if (other.gameObject == basket)
             {
                 door.SetActive(true);
+                audio_win.Play();   
             }
 
         }
