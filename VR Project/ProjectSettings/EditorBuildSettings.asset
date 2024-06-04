@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Lvl 3/Puzzle3.unity
     guid: 8076a3daa53167b468b169844792e4db
+  - enabled: 1
+    path: Assets/Main Menu/Main Menu sintracker.unity
+    guid: 0b851a40ab0f8d449a1d7c6fbb2299e4
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: dc5a169419fa04987b057f65238cf3ba, type: 2}

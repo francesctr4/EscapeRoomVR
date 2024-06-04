@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class MainMenuTirgger : MonoBehaviour
 {
-    public FadetoBlack fadetoBlack;
+    private FadetoBlack fadetoBlack;
+    private GameObject fade;
 
     public bool masterbool;
     void Start()
     {
-        
+        fade = GameObject.Find("Fader");
+        fadetoBlack = fade.GetComponent<FadetoBlack>();
     }
 
     void Update()
