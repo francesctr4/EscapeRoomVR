@@ -965,11 +965,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -1454,12 +1454,12 @@ GameObject:
   m_Component:
   - component: {fileID: 371680340}
   m_Layer: 0
-  m_Name: ------- Part 3 (Key) -------
+  m_Name: ------- Part 3 (Door) -------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &371680340
 Transform:
   m_ObjectHideFlags: 0
@@ -2129,11 +2129,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -2268,7 +2268,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &534307681
 Transform:
   m_ObjectHideFlags: 0
@@ -5039,14 +5039,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
@@ -5055,6 +5059,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1755835806}
+    - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1755835806}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
@@ -5074,11 +5082,19 @@ PrefabInstance:
       value: SolvePuzzle
       objectReference: {fileID: 0}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SolvePuzzle
+      objectReference: {fileID: 0}
+    - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SolvePuzzle
       objectReference: {fileID: 0}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Socket3, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Socket3, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
@@ -5919,11 +5935,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9013637490927309126, guid: 3b540aab13a00a14c82c8824e7d41dbb, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
