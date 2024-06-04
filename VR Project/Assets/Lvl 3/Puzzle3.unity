@@ -2662,11 +2662,6 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 5149003312511039928, guid: c6d2345baa0b30f46ac6d0ea8110fbde, type: 3}
   m_PrefabInstance: {fileID: 2813770998489460870}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &741685170 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7990873191231833676, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
-  m_PrefabInstance: {fileID: 1843501163}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &827298759
 GameObject:
   m_ObjectHideFlags: 0
@@ -4487,7 +4482,6 @@ MonoBehaviour:
   smoke: {fileID: 733409977}
   open: 0
   keySound: {fileID: 827298761}
-  fadetoBlack: {fileID: 1596029669}
   masterBool: 0
 --- !u!114 &1529660669
 MonoBehaviour:
@@ -4772,22 +4766,6 @@ PrefabInstance:
       addedObject: {fileID: 1944326811}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8accb66350fedeb49aebbd1c482ce30d, type: 3}
---- !u!4 &1596029668 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6104478903112557559, guid: d47e0a3dffe5b584ca006b1cec55e0f6, type: 3}
-  m_PrefabInstance: {fileID: 6853182055734733528}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1596029669 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6356718906223870113, guid: d47e0a3dffe5b584ca006b1cec55e0f6, type: 3}
-  m_PrefabInstance: {fileID: 6853182055734733528}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ab2d92492d88c5479eed9541d73b076, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1605856538
 PrefabInstance:
   m_ObjectHideFlags: 0
