@@ -79,13 +79,13 @@ public class FadetoBlack : MonoBehaviour
         if (alphaIn == 0)
         {
             //Cambiar de escena
-            if (sceneNumber < 3)
+            if (sceneNumber < 4)
             {
                 sceneNumber++;
             }
             else
             {
-                sceneNumber = 0;
+                sceneNumber = 1;
             }
             SceneManager.LoadScene(sceneNumber);
 
