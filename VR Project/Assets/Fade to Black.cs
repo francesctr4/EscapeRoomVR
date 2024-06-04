@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FadetoBlack : MonoBehaviour
 {
@@ -14,23 +15,44 @@ public class FadetoBlack : MonoBehaviour
         rend = GetComponent<Renderer>();
         if(fadeOnStart)
         {
-            FadeIn();
+            StartCoroutine(FirstFadeRoutine(1, 0));
         }
     }
 
-    public void FadeIn()
+    //public void FadeIn()
+    //{
+    //    StartCoroutine(FadeRoutine(0, 1));
+
+    //}
+
+    //public void FadeOut()
+    //{
+    //    StartCoroutine(FadeRoutine(1, 0));
+    //}
+
+    public void ChangeScene()
     {
-        Fade(1, 0);
+        StartCoroutine(FadeRoutine(0, 1));
     }
 
-    public void FadeOut()
+    public IEnumerator FirstFadeRoutine(float alphaIn, float alphaOut)
     {
-        Fade(0, 1);
-    }
+        float timer = 0;
+        while (timer <= fadeDuration)
+        {
+            Color newColor = fadeColor;
+            newColor.a = Mathf.Lerp(alphaIn, alphaOut, timer / fadeDuration);
 
-    public void Fade(float alphaIn, float alphaOut)
-    {
-        StartCoroutine(FadeRoutine(alphaIn, alphaOut)); 
+            rend.material.SetColor("_Color", newColor);
+
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        Color newColor2 = fadeColor;
+        newColor2.a = alphaOut;
+
+        rend.material.SetColor("_Color", newColor2);
     }
 
     public IEnumerator FadeRoutine(float alphaIn, float alphaOut)
@@ -45,6 +67,13 @@ public class FadetoBlack : MonoBehaviour
 
             timer += Time.deltaTime;
             yield return null;
+        }
+
+        if (alphaIn == 0)
+        {
+            SceneManager.LoadScene(0);
+
+            StartCoroutine(FadeRoutine(1, 0));
         }
 
         Color newColor2 = fadeColor;

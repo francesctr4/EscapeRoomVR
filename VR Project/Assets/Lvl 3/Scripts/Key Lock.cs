@@ -9,6 +9,9 @@ public class KeyLock : MonoBehaviour
     public bool open;
     public int sceneNumber;
     public AudioSource keySound;
+    private bool firstLoad = false;
+
+    public FadetoBlack fadetoBlack;
 
     public bool masterBool = false;
 
@@ -27,6 +30,7 @@ public class KeyLock : MonoBehaviour
             smoke.Play();
 
             StartCoroutine(ExecuteAfterTime(10.0f));
+            
         }
     }
 
@@ -44,7 +48,13 @@ public class KeyLock : MonoBehaviour
         //}
 
         //SceneManager.LoadScene(sceneNumber);
-        SceneManager.LoadScene(0);
+
+        if (!firstLoad)
+        {
+            fadetoBlack.ChangeScene();
+            firstLoad = true;
+        }
+        //SceneManager.LoadScene(0);
     }
 
     private void OnTriggerStay(Collider other)
