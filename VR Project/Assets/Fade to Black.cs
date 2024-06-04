@@ -10,8 +10,11 @@ public class FadetoBlack : MonoBehaviour
     public Color fadeColor;
     private Renderer rend;
 
+    public int sceneNumber;
+
     void Start()
     {
+        sceneNumber = 0;
         rend = GetComponent<Renderer>();
         if(fadeOnStart)
         {
@@ -71,7 +74,18 @@ public class FadetoBlack : MonoBehaviour
 
         if (alphaIn == 0)
         {
-            SceneManager.LoadScene(0);
+            //Cambiar de escena
+            if (sceneNumber < 3)
+            {
+                sceneNumber++;
+            }
+            else
+            {
+                sceneNumber = 0;
+            }
+            SceneManager.LoadScene(sceneNumber);
+
+            //SceneManager.LoadScene(0);
 
             StartCoroutine(FadeRoutine(1, 0));
         }

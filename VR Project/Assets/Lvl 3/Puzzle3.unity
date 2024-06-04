@@ -4517,7 +4517,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   smoke: {fileID: 733409977}
   open: 0
-  sceneNumber: 2
   keySound: {fileID: 827298761}
   fadetoBlack: {fileID: 1596029669}
   masterBool: 0
@@ -5263,6 +5262,10 @@ PrefabInstance:
     - target: {fileID: 865075385244835223, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_Name
       value: XR Interaction Hands Setup
+      objectReference: {fileID: 0}
+    - target: {fileID: 865075385244835223, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 865075385244835223, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_TagString

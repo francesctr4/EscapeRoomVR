@@ -7,7 +7,7 @@ public class KeyLock : MonoBehaviour
 {
     public ParticleSystem smoke;
     public bool open;
-    public int sceneNumber;
+    //public int sceneNumber;
     public AudioSource keySound;
     private bool firstLoad = false;
 
@@ -17,7 +17,7 @@ public class KeyLock : MonoBehaviour
 
     void Start()
     {
-        sceneNumber = 0;
+        //sceneNumber = 0;
     }
 
     void Update()
