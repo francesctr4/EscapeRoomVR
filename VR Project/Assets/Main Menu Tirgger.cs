@@ -6,6 +6,7 @@ public class MainMenuTirgger : MonoBehaviour
 {
     public FadetoBlack fadetoBlack;
 
+    public bool masterbool;
     void Start()
     {
         
@@ -13,7 +14,11 @@ public class MainMenuTirgger : MonoBehaviour
 
     void Update()
     {
-        
+        if (masterbool)
+        {
+            fadetoBlack.ChangeScene();
+            masterbool = false; 
+        }
     }
 
     private void OnTriggerEnter(Collider other)

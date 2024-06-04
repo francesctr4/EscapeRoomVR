@@ -18,6 +18,7 @@ public class FadetoBlack : MonoBehaviour
         rend = GetComponent<Renderer>();
         if(fadeOnStart)
         {
+            gameObject.GetComponent<MeshRenderer>().enabled = true;
             StartCoroutine(FirstFadeRoutine(1, 0));
         }
     }
@@ -35,11 +36,13 @@ public class FadetoBlack : MonoBehaviour
 
     public void ChangeScene()
     {
+        gameObject.GetComponent<MeshRenderer>().enabled = true;
         StartCoroutine(FadeRoutine(0, 1));
     }
 
     public IEnumerator FirstFadeRoutine(float alphaIn, float alphaOut)
     {
+
         float timer = 0;
         while (timer <= fadeDuration)
         {
@@ -56,6 +59,7 @@ public class FadetoBlack : MonoBehaviour
         newColor2.a = alphaOut;
 
         rend.material.SetColor("_Color", newColor2);
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
 
     public IEnumerator FadeRoutine(float alphaIn, float alphaOut)
@@ -94,5 +98,6 @@ public class FadetoBlack : MonoBehaviour
         newColor2.a = alphaOut;
 
         rend.material.SetColor("_Color", newColor2);
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
 }
