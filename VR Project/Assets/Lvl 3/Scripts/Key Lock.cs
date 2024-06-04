@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,13 +12,15 @@ public class KeyLock : MonoBehaviour
     public AudioSource keySound;
     private bool firstLoad = false;
 
-    public FadetoBlack fadetoBlack;
+    private FadetoBlack fadetoBlack;
+    private GameObject fade;
 
     public bool masterBool = false;
 
     void Start()
     {
-        //sceneNumber = 0;
+        fade = GameObject.Find("Fader");
+        fadetoBlack = fade.GetComponent<FadetoBlack>();
     }
 
     void Update()
