@@ -93,7 +93,7 @@ public class audio_manager : MonoBehaviour
         {
             if (executeAfterTimeCoroutine == null)
             {
-                executeAfterTimeCoroutine = StartCoroutine(ExecuteAfterTime(3f));
+                executeAfterTimeCoroutine = StartCoroutine(ExecuteAfterTime(7f));
             }
         }
     }
