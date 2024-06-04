@@ -33,31 +33,18 @@ public class KeyLock : MonoBehaviour
             smoke.Play();
 
             StartCoroutine(ExecuteAfterTime(10.0f));
-            
         }
     }
 
     IEnumerator ExecuteAfterTime(float time)
     {
         yield return new WaitForSeconds(time);
-        // Cambiar de escena
-        //if (sceneNumber < 3)
-        //{
-        //    sceneNumber++;
-        //}
-        //else
-        //{
-        //    sceneNumber = 0;
-        //}
-
-        //SceneManager.LoadScene(sceneNumber);
 
         if (!firstLoad)
         {
             fadetoBlack.ChangeScene();
             firstLoad = true;
         }
-        //SceneManager.LoadScene(0);
     }
 
     private void OnTriggerStay(Collider other)
